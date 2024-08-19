@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-Cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/assets/RCA_Indian_120_90.png" alt="logo RCA">
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <textarea class="area-texto-in" rows="18" cols="50" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div>
+                <div class="alerta">
+                    <img class="icono-alerta" src="./assets/exclam_icon.png" alt="Icono de exclamación">
+                    <p class="texto-alerta">Solo letras minúsculas y sin acentos</p>
+                </div>
+                
+                <div class="seccion-botones-enc-des">
+                    <input class="boton-encr" type="button" value="Encriptar">
+                    <input class="boton-desencr" type="button" value="Desencriptar">
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-texto-out">
+            <div>
+                <textarea class="area-texto-out" rows="19" cols="40"></textarea>
+                <div>
+                    <p class="texto-no-encontrado">Ningún mensaje fue encontrado</p>
+                </div>
+                <div class="seccion-boton-copiar">
+                    <input class="boton-copiar" type="button" value="Copiar">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desafío encriptador de texto alura - AVP 2024</p>
+    </footer>
+    
+<script src="/script.js"></script>
+</body>
+</html>

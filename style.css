@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: ubuntu; /*Fuente para toda la pagina*/
+    
+}
+
+:root{
+    --colorDeFondo: #C9DABF;
+    --ColorFondoBotonEncr: #9CA986;
+    --ColorFondoBotonDesenc: #5F6F65;
+    --ColorFondoBotonCopiar: #808D7C;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 14px;
+    border: solid 2px #808D7C;
+
+}
+
+body {
+    background-color: var(--colorDeFondo);
+}
+
+main {
+    display: flex;
+    justify-content: space-between; /* Ajuste para distribuir el espacio */
+    margin: 20px 80px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.area-texto-in {
+    background: none;
+    border: none;
+    color: black;
+    text-transform: lowercase;
+    font-size: 1rem;
+    
+}
+
+::placeholder {
+    color: black;
+    font-size: 1rem;
+}
+
+.area-texto-in:focus {
+    outline: none;
+}
+
+.area-texto-out {
+    background-color: white;
+    background-image: url("/assets/monito.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    margin-left: 90px;
+    font-size: 1rem;
+}
+
+.area-texto-out:focus {
+    outline: none;
+}
+
+.seccion-botones-enc-des {
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 32px;
+}
+
+.seccion-boton-copiar {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.boton-encr {
+    background-color: var(--ColorFondoBotonEncr);
+    border: 2px solid #808D7C;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    font-size: 1rem;
+}
+
+.boton-desencr {
+    background-color: var(--ColorFondoBotonDesenc);
+    border: 2px solid #5F6F65;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    font-size: 1rem;
+}
+
+.boton-copiar {
+    background-color: var(--ColorFondoBotonCopiar);
+    border: 2px solid #5F6F65;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    margin-left: 180px;
+    position: static; /* Cambiado de absolute a static */
+    font-size: 1rem;
+}
+
+.texto-no-encontrado {
+    color: black;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: 130px;
+}
+
+.alerta {
+    display: flex;
+    align-items: center;  /* Alinea verticalmente el icono y el texto */
+    background-color: #F9E6E6;  /* Fondo de alerta suave */
+    border: 1px solid #E57373;  /* Borde del mismo tono que el ícono */
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #D32F2F;  /* Color del texto de alerta */
+}
+
+.icono-alerta {
+    width: 20px;  /* Tamaño del icono */
+    height: 20px;
+    margin-right: 10px;  /* Espacio entre el icono y el texto */
+}
+
+.texto-alerta {
+    font-size: 1rem;
+    color: inherit;  /* Hereda el color definido en .alerta */
+    margin: 0;  /* Elimina el margen por defecto del párrafo */
+}
+
+/* Media Query para pantallas menores a 600px */
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column; /* Los elementos estarán uno encima del otro */
+        margin: 10px;
+    }
+
+    .area-texto-in, .area-texto-out {
+        width: 100%; /* Ocupan el 100% del contenedor */
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade espacio entre los elementos */
+    }
+
+    .boton-encr, .boton-desencr, .boton-copiar {
+        width: 100%; /* Los botones ocuparán todo el ancho disponible */
+        margin-top: 10px;
+    }
+}
