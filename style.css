@@ -28,7 +28,7 @@ body {
 
 main {
     display: flex;
-    justify-content: space-between; /* Ajuste para distribuir el espacio */
+    justify-content: space-around; /* Ajuste para distribuir el espacio */
     margin: 20px 80px;
 }
 
@@ -77,9 +77,10 @@ footer{
     gap: 32px;
 }
 
-.seccion-boton-copiar {
+.seccion-boton-copiar-borrar {
     display: flex;
     margin-top: 1rem;
+    gap: 32px;
 }
 
 .boton-encr {
@@ -112,7 +113,19 @@ footer{
     cursor: pointer;
     height: 40px;
     width: 150px;
-    margin-left: 180px;
+    margin-left: 100px;
+    position: static; /* Cambiado de absolute a static */
+    font-size: 1rem;
+}
+
+.boton-borrar{
+    background-color: var(--ColorFondoBotonCopiar);
+    border: 2px solid #5F6F65;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
     position: static; /* Cambiado de absolute a static */
     font-size: 1rem;
 }
@@ -121,7 +134,7 @@ footer{
     color: black;
     font-size: 1rem;
     margin-top: 10px;
-    margin-left: 130px;
+    margin-left: 150px;
 }
 
 .alerta {

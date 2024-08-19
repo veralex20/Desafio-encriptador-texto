@@ -78,14 +78,28 @@ document.querySelector('.boton-desencr').addEventListener('click', () => {
 
 // Función para copiar el texto del área de salida al portapapeles
 function copiarTexto() {
-    let areaSalida = document.querySelector('.area-texto-out');
-    areaSalida.select();  // Selecciona el texto en el área de salida
-    document.execCommand('copy');  // Copia el texto seleccionado al portapapeles
-
-    // mostrar un mensaje temporal de confirmación
-    alert("Texto copiado al portapapeles");
+    const textoSalida = document.querySelector('.area-texto-out').value;
+    navigator.clipboard.writeText(textoSalida).then(() => {
+        alert('Texto copiado al portapapeles');
+    });
 }
 
 // Añade el evento al botón Copiar
 document.querySelector('.boton-copiar').addEventListener('click', copiarTexto);
+// Añade el evento al botón borrar
+document.querySelector('.boton-borrar').addEventListener('click', borrarTexto);
+
+
+// Función para borrar el texto del área de salida
+function borrarTexto() {
+    const areaTextoOut = document.querySelector('.area-texto-out');
+    areaTextoOut.value = ''; // Borra el contenido del área de texto de salida
+
+    // Verifica si el área de texto está vacía
+    if (areaTextoOut.value === '') {
+        areaTextoOut.style.backgroundImage = "url('/assets/monito.png')"; // Muestra la imagen de fondo nuevamente
+        document.querySelector('.texto-no-encontrado').style.display = 'block'; // Muestra el texto de "Ningún mensaje fue encontrado"
+    }
+}
+
 
