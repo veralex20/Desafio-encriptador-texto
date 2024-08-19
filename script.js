@@ -46,14 +46,14 @@ document.querySelector('.boton-desencr').addEventListener('click', () => {
 
 // Función para verificar si hay contenido en el área de salida y ajustar el fondo y el texto
 function actualizarFondoSalida() {
-    let areaSalida = document.querySelector('.area-texto-out');
-    let textoNoEncontrado = document.querySelector('.texto-no-encontrado');
+    const areaSalida = document.querySelector('.area-texto-out');
+    const textoNoEncontrado = document.querySelector('.texto-no-encontrado');
 
     if (areaSalida.value.trim() !== "") {
         areaSalida.style.backgroundImage = "none";
         textoNoEncontrado.style.display = "none";
     } else {
-        areaSalida.style.backgroundImage = "url('/assets/monito.png')";
+        areaSalida.style.backgroundImage = "url('./assets/monito.png')";
         textoNoEncontrado.style.display = "block";
     }
 }
@@ -97,7 +97,7 @@ function borrarTexto() {
 
     // Verifica si el área de texto está vacía
     if (areaTextoOut.value === '') {
-        areaTextoOut.style.backgroundImage = "url('/assets/monito.png')"; // Muestra la imagen de fondo nuevamente
+        areaTextoOut.style.backgroundImage = "url('./assets/monito.png')"; // Muestra la imagen de fondo nuevamente
         document.querySelector('.texto-no-encontrado').style.display = 'block'; // Muestra el texto de "Ningún mensaje fue encontrado"
     }
 }
