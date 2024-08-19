@@ -58,7 +58,7 @@ footer{
 
 .area-texto-out {
     background-color: white;
-    background-image: url("/assets/monito.png");
+    background-image: url("./assets/monito.png");
     background-repeat: no-repeat;
     border: none;
     border-radius: 5px;
